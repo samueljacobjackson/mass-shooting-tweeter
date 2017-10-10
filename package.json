@@ -1,0 +1,27 @@
+{
+  "name": "mass-shooting-tweeter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samueljacobjackson/mass-shooting-tweeter.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/samueljacobjackson/mass-shooting-tweeter/issues"
+  },
+  "homepage": "https://github.com/samueljacobjackson/mass-shooting-tweeter#readme",
+  "dependencies": {
+    "aws-sdk": "^2.130.0",
+    "bluebird": "^3.5.1",
+    "dotenv": "^4.0.0",
+    "goo.gl": "^0.1.4",
+    "lodash": "^4.17.4",
+    "twitter": "^1.7.1"
+  }
+}
