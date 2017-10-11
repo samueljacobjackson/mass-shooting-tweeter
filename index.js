@@ -9,7 +9,6 @@ var tweeter = require('./lib/tweeter');
 exports.handler = function(event, context, callback) {
     doIt()
     .catch(function(err){
-        console.log('err');
         return callback(err);
     })
     .done(function(){
@@ -37,25 +36,17 @@ var it = function(year){
             var promises = [];
             _.forEach(siftedData, function(o){
                 promises.push(formatAndTweet(o));
-            })
-            return Promise.all(promises)
-            .then()
-            .catch()
-            .done();
+            });
+            return Promise.all(promises);
         });
     });
 }
 
 var formatAndTweet = function(item){
     return new Promise(function(resolve, reject) {
-
-        console.log(item);
-
         return formatter.format(item)
         .then(function(tweet){
-            console.log(tweet);
-            return resolve();
-            /*return tweeter.tweet(tweet);*/
+            return tweeter.tweet(tweet);
         });
     });
 }
