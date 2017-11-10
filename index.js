@@ -20,7 +20,7 @@ var doIt = function(){
     var year = new Date().getFullYear();
     var month = new Date().getMonth() + 1;
     return new Promise(function(resolve, reject) {
-        if(month < 12){ return it(year); }
+        if(month > 1){ return it(year); }
         else{
             return it(year - 1)
             .then(year);
